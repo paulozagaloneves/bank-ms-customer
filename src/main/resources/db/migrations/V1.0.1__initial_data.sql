@@ -1,0 +1,2 @@
+  INSERT INTO customer(name,emailAddress, streetAddress, city, province, postalCode, country, phoneNumber)
+   values ('Customer 001', 'email001@email.com', 'Rua A, 100', 'Lisboa', 'NA', '1100-100', 'PT', '213456789');
