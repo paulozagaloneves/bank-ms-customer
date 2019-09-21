@@ -1,10 +1,13 @@
 package com.itsector.bank.app.customer.dto.in;
 
+
+
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+
 
 import com.itsector.bank.app.customer.dto.BaseDTO;
 
@@ -29,7 +32,8 @@ public class CustomerIn extends BaseDTO
 	@Length(min = 5, max = 75, message = "Length must be between 5 and 75 characters.")
 	private String emailAddress;
 	@NotEmpty(message = "Required.")
-	@Length(min = 5, max = 75, message = "Length must be between 5 and 75 characters.")
+	//@Length(min = 5, max = 75, message = "Length must be between 5 and 75 characters.")//codigo original
+	@Length(min = 5, max = 50, message = "Length must be between 5 and 50 characters.")//foi alterado o tamanho maximo do campo streetAddress[FabioLobo]
 	private String streetAddress;
 	@Length(min = 5, max = 75, message = "Length must be between 5 and 75 characters.")
 	private String streetAddress2;
@@ -49,5 +53,6 @@ public class CustomerIn extends BaseDTO
 	@Length(min = 2, max = 2, message = "Length must be 2 characters.")
 	private String country;
 	private String phoneNumber;
+
 
 }
